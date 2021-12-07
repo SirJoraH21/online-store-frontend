@@ -1,1 +1,1 @@
-# online-store-frontend
+# online-store-fullstack
