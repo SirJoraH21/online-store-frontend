@@ -1,6 +1,5 @@
 const uuid = require('uuid');
 const path = require('path');
-const { url } = require('inspector');
 const { Device, DeviceInfo } = require('../models/models');
 const ApiError = require('../error/apiError');
 
