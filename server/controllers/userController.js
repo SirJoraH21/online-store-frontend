@@ -1,3 +1,5 @@
+const ApiError = require('../error/apiError');
+
 class UserController {
   async registration(req, res) {
 
@@ -7,10 +9,14 @@ class UserController {
 
   }
 
-  async check(req, res) {
-    const { query } = req;
+  async check(req, res, next) {
+    const { id } = req.query;
 
-    res.json(query);
+    if (!id) {
+      return next(ApiError.badRequest('No id query params'));
+    }
+
+    return res.json(id);
   }
 }
 
