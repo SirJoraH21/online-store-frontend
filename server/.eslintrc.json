@@ -15,5 +15,7 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "class-methods-use-this": "warn",
+        "prefer-const": "warn"
     }
 }
