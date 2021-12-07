@@ -6,5 +6,6 @@ const router = new Router();
 
 router.post('/', checkRole('admin'), brandController.create);
 router.get('/', brandController.getAll);
+router.delete('/:id', checkRole('admin'), brandController.delete);
 
 module.exports = router;
